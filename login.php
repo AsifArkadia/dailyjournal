@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="card-body">
           <div class="text-center mb-3">
             <i class="bi bi-person-circle h1 display-4"></i>
-            <p>Welcome to My Daily Journal</p>
+            <p>Login to My Daily Journal</p>
             <hr />
           </div>
           <form action="" method="post">
