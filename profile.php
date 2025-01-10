@@ -116,6 +116,7 @@ $currentImage = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] :
     </div>
     </nav><br><br>
     <!-- nav end -->
+     
     <!-- content begin -->
 <div class="container"> 
             <?php
