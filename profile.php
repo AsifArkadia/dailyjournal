@@ -4,7 +4,7 @@ include "koneksi.php"; // File koneksi database
 
 // Ambil data pengguna berdasarkan sesi login
 $username = $_SESSION['username']; // Pastikan sudah ada sesi login
-$query = "SELECT * FROM users WHERE username = '$username'";
+$query = "SELECT * FROM user WHERE username = '$username'";
 $result = mysqli_query($conn, $query);
 //$user = mysqli_fetch_assoc($result);
 
@@ -70,8 +70,8 @@ $currentImage = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] :
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Asif</title>
     <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
 <!-- nav begin -->
@@ -116,6 +116,8 @@ $currentImage = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] :
     </div>
     </nav><br><br>
     <!-- nav end -->
+
+    <!-- content begin -->
 <div class="container"> 
             <?php
             if(isset($_GET['page'])){
@@ -129,6 +131,7 @@ $currentImage = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] :
             }
             ?>
         </div>
+        <!-- content end -->
 <div class="container mt-5">
     <form method="POST" enctype="multipart/form-data">
         <div class="mb-3">
@@ -148,7 +151,7 @@ $currentImage = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] :
         <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script><br><br>
+<br><br>
 
 <!-- footer begin -->
 <footer class="text-center p-5 bg-secondary">
